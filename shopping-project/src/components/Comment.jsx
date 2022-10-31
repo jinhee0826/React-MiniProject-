@@ -1,10 +1,11 @@
 import { ListGroup } from "react-bootstrap";
 
-const Comment = () => {
+const Comment = (props) => {
+    const {comment} = props;
     return (  
         <ListGroup.Item>
-            <h5>이름</h5>
-            <p>댓글내용</p>
+            <h5>{comment.name}</h5>
+            <p>{comment.text}</p>
         </ListGroup.Item>
     );
 }
